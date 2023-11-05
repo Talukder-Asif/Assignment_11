@@ -9,7 +9,7 @@ const PopularFood = ({ foodData }) => {
       </div>
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl m-auto px-5">
         {foodData.map((food) => (
-          <div key={food._id} className="w-full mt-5 mb-5 relative max-w-sm abc bg-[#faf7f2] border border-gray-200 hover:border-[#eb0029] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div key={food._id} className="mt-5 mb-5 relative abc bg-[#faf7f2] border border-gray-200 hover:border-[#eb0029] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
 
               <img
                 className="p-8 rounded-full"
