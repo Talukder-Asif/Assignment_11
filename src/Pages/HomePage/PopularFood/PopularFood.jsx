@@ -34,7 +34,7 @@ const PopularFood = ({ foodData, pageName }) => {
                 <span className="text-3xl font-bold text-gray-900 dark:text-white">
                   {food.price}$
                 </span>
-                <Link to={'/foodItems'} ><button className=" border-2 border-[#eb0029] text-white bg-[#eb0029] hover:bg-white hover:text-[#eb0029] font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Details</button></Link>
+                <Link to={`/foods/${food._id}`} ><button className=" border-2 border-[#eb0029] text-white bg-[#eb0029] hover:bg-white hover:text-[#eb0029] font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Details</button></Link>
               </div>
               <img className=" w-10/12 border-none def hidden absolute bottom-0 " src="https://themeholy.com/wordpress/pizzan/wp-content/themes/pizzan/assets/img/fire.png" alt="" />
             </div>

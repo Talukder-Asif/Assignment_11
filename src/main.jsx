@@ -11,6 +11,7 @@ import FoodItems from './Pages/AllFoodItems/FoodItems';
 import Blog from './Pages/BlogPage/Blog';
 import Login from './Pages/LoginPage/Login';
 import DashBoard from './Pages/UserProfile/DashBoard';
+import SingleProduct from './Pages/SingleProduct/SingleProduct';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path:'/signin',
         element:<Login></Login>
+      },
+      {
+        path:'/foods/:id',
+        element:<SingleProduct></SingleProduct>,
+        loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
       },
       {
         path:'/userName',
