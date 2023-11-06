@@ -12,6 +12,8 @@ import Blog from './Pages/BlogPage/Blog';
 import Login from './Pages/LoginPage/Login';
 import DashBoard from './Pages/UserProfile/DashBoard';
 import SingleProduct from './Pages/SingleProduct/SingleProduct';
+import SignUp from './Pages/SignUp/SignUp';
+import AuthProvider from './Authantication/AuthProvider/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,10 @@ const router = createBrowserRouter([
         element:<Login></Login>
       },
       {
+        path:'/signup',
+        element:<SignUp></SignUp>
+      },
+      {
         path:'/foods/:id',
         element:<SingleProduct></SingleProduct>,
         loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
@@ -54,6 +60,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+  <AuthProvider>
     <RouterProvider router={router} />
+  </AuthProvider>
   </React.StrictMode>,
 )

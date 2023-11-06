@@ -1,10 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { Link, NavLink } from "react-router-dom";
-import image1 from '/src/assets/testHalal.png';
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from '/src/assets/Logo.png'
 import "./navbar.css"
+import { useContext } from "react";
+import { AuthContext } from "../../Authantication/AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const navStyle = "block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+
 let dropdownClick = false;
 const navs = <>
     <li>
@@ -18,6 +21,8 @@ const navs = <>
       </li>
 </>
 const NavBar = () => {
+  const {user,logOut} = useContext(AuthContext)
+
     const handelDropdown = () =>{
         dropdownClick = !dropdownClick;
         const elememts = document.getElementById('mobileManu')
@@ -35,6 +40,29 @@ const NavBar = () => {
             elememts.classList.remove("z-50");
         }
     }
+    const navigate = useNavigate();
+    const handelLogOut = () =>{
+      logOut()
+      .then(() => {
+        Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            navigate('/signin');
+            window.location.reload();
+          }
+        });
+       
+      }).catch((error) => {
+        // An error happened.
+      });
+    }
 
 
     return (
@@ -43,21 +71,27 @@ const NavBar = () => {
 <nav className="bg-[#010f1c] border-gray-200 dark:bg-gray-900">
   <div className="max-w-screen-xl flex items-center justify-between mx-auto px-2 md:px-4 py-2">
   <Link to="/" className="flex items-center">
-      <img src={logo} className="h-10 md:h-14 md:mr-3" alt="Flowbite Logo" />
+      <img src={logo} className="h-10 md:h-14 md:mr-3" alt="" />
   </Link>
 
   <div className="flex items-center md:order-2">
 
+        {
+          user?.email? 
+        <button onClick={handelLogOut} className="text-white hover:text-white border border-[#eb0029] hover:bg-[#eb0029] font-medium rounded-lg text-sm md:px-5 px-3  py-1 md:py-1.5 text-center mr-2 md:mr-3 ">Log Out</button>:
         <Link to="/signin">
         <button className="text-white hover:text-white border border-[#eb0029] hover:bg-[#eb0029] font-medium rounded-lg text-sm md:px-5 px-3  py-1 md:py-1.5 text-center mr-2 md:mr-3 ">Login</button>
         </Link>
+        }
 
 {/* Dashboard Button */}
-      <Link to={'/userName'}>
+        {
+          user?.email? <Link to={'/userName'}>
       <button className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
-        <img className="md:w-8 w-6 md:h-8 h-6 rounded-full" src={image1}/>
+        <img className="md:w-8 w-6 md:h-8 h-6 rounded-full" src={user.photoURL}/>
       </button>
-      </Link>
+      </Link>: null
+        }
 
 
       <button onClick={handelDropdown} type="button" className="inline-flex items-center p-2 md:w-10 md:h-10 justify-center text-sm text-white rounded-lg md:hidden focus:outline-none ring-2 ring-gray-400 " >
