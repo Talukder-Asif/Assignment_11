@@ -8,7 +8,7 @@ const HomePage = () => {
     return (
         <div>
             <Slider></Slider>
-            <PopularFood foodData={foodData}></PopularFood>
+            <PopularFood pageName={'home'} foodData={foodData}></PopularFood>
             {/* Adviser */}
             <div style={{backgroundImage: "url(https://themeholy.com/wordpress/pizzan/wp-content/uploads/2023/06/offer_banner_1.jpg)"}} className="mt-16 bg-no-repeat bg-cover bg-center">
             <div className="max-w-7xl m-auto md:py-20 p-5 lg:py-36 md:grid grid-cols-2 ">

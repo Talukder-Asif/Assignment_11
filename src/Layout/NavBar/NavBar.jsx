@@ -26,14 +26,12 @@ const NavBar = () => {
             elememts.classList.add("absolute");
             elememts.classList.add("top-12");
             elememts.classList.add("right-10");
-            elememts.classList.add("w-3/6");
             elememts.classList.add("z-50");
         }else{
             elememts.classList.add("hidden");
             elememts.classList.remove("absolute");
             elememts.classList.remove("top-12");
             elememts.classList.remove("right-10");
-            elememts.classList.remove("w-3/6");
             elememts.classList.remove("z-50");
         }
     }
@@ -69,8 +67,8 @@ const NavBar = () => {
     </button>
   </div>
 
-  <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobileManu">
-    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#010f1c] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#010f1c ">
+  <div className="items-center justify-between w-1/2 hidden md:flex md:w-auto md:order-1" id="mobileManu">
+    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#010f1c] md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-[#010f1c] ">
      {
         navs
      }
