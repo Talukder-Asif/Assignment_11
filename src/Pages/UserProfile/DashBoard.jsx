@@ -25,18 +25,18 @@ const DashBoard = () => {
         </div>
       </div>
 
-        <div className="max-w-7xl m-auto md:flex flex-nowrap flex-col md:flex-row my-10">
+        <div className="max-w-7xl m-auto lg:flex flex-nowrap flex-col md:flex-row my-3 lg:my-10">
 
 
 
 
 
-        <div className="md:w-1/4 pl-3 flex flex-col">
+        <div className="lg:w-1/4 lg:pl-3 gap-3 flex justify-evenly flex-wrap flex-row lg:flex-col ">
 
-        <NavLink className="p-5 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-xl w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]" to={"/dashboard"}>Profile</NavLink>
-        <NavLink  className="p-5 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-xl w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]" >Add Products</NavLink>
-        <NavLink  className="p-5 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-xl w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]" >My Products</NavLink>
-        <NavLink  className="p-5 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-xl w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]" >My Order</NavLink>
+        <NavLink className="p-2  md:p-5 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm md:text-base lg:text-xl lg:w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]" to={"/dashboard"}>Profile</NavLink>
+        <NavLink  className="p-2  md:p-5 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm md:text-base lg:text-xl lg:w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]" >Add Products</NavLink>
+        <NavLink  className="p-2  md:p-5 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm md:text-base lg:text-xl lg:w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]" >My Products</NavLink>
+        <NavLink  className="p-2  md:p-5 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm md:text-base lg:text-xl lg:w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]" >My Order</NavLink>
 
 
         </div>
@@ -44,7 +44,7 @@ const DashBoard = () => {
 
 
 
-        <div className="md:w-3/4 pl-3">
+        <div className="lg:w-3/4 pl-3">
         <Outlet></Outlet>
         </div>   
         </div>

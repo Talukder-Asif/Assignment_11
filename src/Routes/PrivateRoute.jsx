@@ -6,8 +6,8 @@ const PrivateRoute = ({children}) => {
     const {user, loading} = useContext(AuthContext);
     if(loading){
         return<div className="h-screen w-screen grid content-center justify-center">
-           <h1 className="text-7xl font-bold">
-            Loading......
+           <h1 className="text-4xl md:text-7xl font-bold">
+            Loading....
            </h1>
         </div>
     }
