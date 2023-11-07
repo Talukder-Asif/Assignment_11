@@ -17,6 +17,7 @@ import AuthProvider from './Authantication/AuthProvider/AuthProvider';
 import PrivateRoute from './Routes/PrivateRoute';
 import FoodOrder from './Pages/OrderPage/FoodOrder';
 import Profile from './Pages/UserProfile/Profile/Profile';
+import AddFoodItems from './Pages/UserProfile/AddFoodItems/AddFoodItems';
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
           {
             path:'/dashboard',
             element:<Profile></Profile>,
+          },
+          {
+            path:'/dashboard/addfood',
+            element:<AddFoodItems></AddFoodItems>
           }
         ]
       }
