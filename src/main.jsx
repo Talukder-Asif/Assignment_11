@@ -16,6 +16,7 @@ import SignUp from './Pages/SignUp/SignUp';
 import AuthProvider from './Authantication/AuthProvider/AuthProvider';
 import PrivateRoute from './Routes/PrivateRoute';
 import FoodOrder from './Pages/OrderPage/FoodOrder';
+import Profile from './Pages/UserProfile/Profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -56,8 +57,16 @@ const router = createBrowserRouter([
         loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
       },
       {
-        path:'/userName',
-        element:<DashBoard></DashBoard>
+        path:'/dashboard',
+        element:<PrivateRoute>
+          <DashBoard></DashBoard>
+        </PrivateRoute>,
+        children:[
+          {
+            path:'/dashboard',
+            element:<Profile></Profile>,
+          }
+        ]
       }
     ]
   },

@@ -104,7 +104,7 @@ const SignUp = () => {
           Create a account
         </h3>
         <div>
-          <form onScroll={handelCreate}>
+          <form onSubmit={handelCreate}>
             <div className="grid grid-cols-2 gap-5">
               <div className="">
                 <input
@@ -143,6 +143,9 @@ const SignUp = () => {
                 />
               </div>
             </div>
+            {
+                error? <p className="text-red-600 py-2">{error}</p>:""
+              }
             <button
               type="submit"
               className=" border-2 border-[#eb0029] text-white bg-[#eb0029] hover:bg-white hover:text-[#eb0029] font-medium rounded-lg text-base px-5 mt-5 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 w-full dark:focus:ring-red-900"
