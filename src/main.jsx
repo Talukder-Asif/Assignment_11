@@ -18,6 +18,8 @@ import PrivateRoute from './Routes/PrivateRoute';
 import FoodOrder from './Pages/OrderPage/FoodOrder';
 import Profile from './Pages/UserProfile/Profile/Profile';
 import AddFoodItems from './Pages/UserProfile/AddFoodItems/AddFoodItems';
+import MyFootItems from './Pages/UserProfile/MyFoodItems/MyFootItems';
+import UpdateFood from './Pages/UserProfile/UpdateItem/UpdateFood';
 
 const router = createBrowserRouter([
   {
@@ -70,6 +72,15 @@ const router = createBrowserRouter([
           {
             path:'/dashboard/addfood',
             element:<AddFoodItems></AddFoodItems>
+          },
+          {
+            path:'/dashboard/foods',
+            element:<MyFootItems></MyFootItems>
+          },
+          {
+            path:'/dashboard/update/:id',
+            element:<UpdateFood></UpdateFood>,
+            loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
           }
         ]
       }

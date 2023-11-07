@@ -53,7 +53,7 @@ const FoodOrder = () => {
     };
 
     const updateData = {
-        quantity: (quantity - parseInt(e.target.quantity.value) ),
+        quantity: (parseInt(quantity )- parseInt(e.target.quantity.value) ),
         orderNumber: parseInt(orderNumber) + parseInt(e.target.quantity.value) ,
         name,
         image,

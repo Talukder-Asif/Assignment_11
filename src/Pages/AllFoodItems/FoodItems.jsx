@@ -103,7 +103,7 @@ const FoodItems = () => {
         searchingItem? <PopularFood foodData={foods}></PopularFood> :
         <div className="text-center">
         <h1 className="text-5xl text-center mb-4 font-extrabold dark:text-white">No food Found</h1>
-        <Link to={'/'} ><button className=" border-2 border-[#eb0029] text-white bg-[#eb0029] hover:bg-white hover:text-[#eb0029] font-medium rounded-lg text-sm px-10 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Add a Food</button></Link>
+        <Link to={'/dashboard/addfood'} ><button className=" border-2 border-[#eb0029] text-white bg-[#eb0029] hover:bg-white hover:text-[#eb0029] font-medium rounded-lg text-sm px-10 py-2.5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Add a Food</button></Link>
         </div>
       }
 

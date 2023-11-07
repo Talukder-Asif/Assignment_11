@@ -31,7 +31,7 @@ const SingleProduct = () => {
 
                 </div>
             </div>
-            <p>Details : {details}</p>
+            <p className='max-w-6xl p-4 m-auto'><b>Details</b> : {details}</p>
         </div>
     );
 };
