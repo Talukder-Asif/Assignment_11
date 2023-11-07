@@ -26,30 +26,30 @@ const DashBoard = () => {
       </div>
 
       <div className="max-w-7xl m-auto relative lg:flex flex-nowrap flex-col md:flex-row my-3 lg:my-10">
-        <div className="lg:w-1/4 lg:sticky top-10 lg:pl-3 lg:h-[400px] gap-3 flex justify-evenly flex-wrap flex-row lg:flex-col ">
+        <div className="lg:w-[20%] lg:sticky top-10 lg:pl-3 lg:h-[400px] gap-3 flex justify-evenly flex-wrap flex-row lg:flex-col ">
           <NavLink
-            className="p-2 lg:p-5 md:p-3 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm lg:font-bold md:text-base lg:text-xl lg:w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c] "
+            className="p-2 lg:p-5 md:p-3 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm lg:font-bold md:text-base lg:text-xl lg:w-[80%] border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c] "
             to={"/dashboard"}
           >
             Profile
           </NavLink>
           <NavLink
-            className="p-2 lg:p-5 md:p-3 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm lg:font-bold md:text-base lg:text-xl lg:w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]"
+            className="p-2 lg:p-5 md:p-3 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm lg:font-bold md:text-base lg:text-xl lg:w-[80%] border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]"
             to={"/dashboard/addfood"}
           >
             Add Food
           </NavLink>
-          <NavLink className="p-2 lg:p-5 md:p-3 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm lg:font-bold md:text-base lg:text-xl lg:w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]"
+          <NavLink className="p-2 lg:p-5 md:p-3 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm lg:font-bold md:text-base lg:text-xl lg:w-[80%] border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]"
           to={'/dashboard/foods'}>
             My Foods
           </NavLink>
-          <NavLink className="p-2 lg:p-5 md:p-3 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm lg:font-bold md:text-base lg:text-xl lg:w-3/4 border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]">
+          <NavLink to={'/dashboard/order'} className="p-2 lg:p-5 md:p-3 xyz text-[#eb0029] rounded my-2 text-center font-semibold text-sm lg:font-bold md:text-base lg:text-xl lg:w-[80%] border-2 hover:border-[#eb0029] border-[#010f1c] bg-[#010f1c]">
             My Order
           </NavLink>
         </div>
 
-        <div className="lg:w-3/4 px-3 lg:border-4 lg:border-black">
-          <div className="lg:py-3 lg:pl-3">
+        <div className="lg:w-[80%] px-3 lg:border-4 lg:border-black">
+          <div className="lg:py-3">
             <Outlet></Outlet>
           </div>
         </div>

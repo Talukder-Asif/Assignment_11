@@ -20,6 +20,7 @@ import Profile from './Pages/UserProfile/Profile/Profile';
 import AddFoodItems from './Pages/UserProfile/AddFoodItems/AddFoodItems';
 import MyFootItems from './Pages/UserProfile/MyFoodItems/MyFootItems';
 import UpdateFood from './Pages/UserProfile/UpdateItem/UpdateFood';
+import MyOrder from './Pages/UserProfile/MyOrderFood/MyOrder';
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
             path:'/dashboard/update/:id',
             element:<UpdateFood></UpdateFood>,
             loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
+          },
+          {
+            path: '/dashboard/order',
+            element:<MyOrder></MyOrder>
           }
         ]
       }
