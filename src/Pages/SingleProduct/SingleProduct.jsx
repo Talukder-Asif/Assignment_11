@@ -25,7 +25,7 @@ const SingleProduct = () => {
                 <p className='text-gray-900 text-xl font-semibold'>Category : {category}</p>
                 <p className='text-gray-900 text-xl font-semibold'>Made By : {shelfName}</p>
                 <p className='text-gray-900 text-xl font-semibold'>Food Origin : {origine}</p>
-                <Link to={'/foodItems'} ><button className="mt-5 border-2 border-[#eb0029] text-white bg-[#eb0029] hover:bg-white hover:text-[#eb0029] font-medium rounded-lg text-xl px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Order Now</button></Link>
+                <Link to={`/foods/order/${_id}`} ><button className="mt-5 border-2 border-[#eb0029] text-white bg-[#eb0029] hover:bg-white hover:text-[#eb0029] font-medium rounded-lg text-xl px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Order Now</button></Link>
                 <br />
                 <p className='text-gray-900 text-xl font-semibold'><span className='border-b-2 border-[#eb0029]'>Short Description</span> : {shortDescription}</p>
 

@@ -4,6 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const AuthContext = createContext(null);
 import { GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../firebase.config";
+import axios from "axios";
 
 
 
@@ -40,6 +41,12 @@ const AuthProvider = ({children}) => {
             onAuthStateChanged(auth, (User) => {
                 setloading(false)
                 if (User) {
+                    const data = {
+                        name : User.displayName,
+                        email : User.email,
+                        photo : User.photoURL,
+                    }
+                    axios.put(`http://localhost:5000/user/${User.email}`, data)
                   setUser(User)
                 }
               });

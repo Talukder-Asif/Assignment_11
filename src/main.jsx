@@ -14,6 +14,8 @@ import DashBoard from './Pages/UserProfile/DashBoard';
 import SingleProduct from './Pages/SingleProduct/SingleProduct';
 import SignUp from './Pages/SignUp/SignUp';
 import AuthProvider from './Authantication/AuthProvider/AuthProvider';
+import PrivateRoute from './Routes/PrivateRoute';
+import FoodOrder from './Pages/OrderPage/FoodOrder';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +45,14 @@ const router = createBrowserRouter([
       },
       {
         path:'/foods/:id',
-        element:<SingleProduct></SingleProduct>,
+        element:<SingleProduct/>,
+        loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
+      },
+      {
+        path:'/foods/order/:id',
+        element:<PrivateRoute>
+          <FoodOrder></FoodOrder>
+        </PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
       },
       {

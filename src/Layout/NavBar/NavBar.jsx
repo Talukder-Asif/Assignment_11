@@ -49,9 +49,9 @@ const NavBar = () => {
           text: "You won't be able to revert this!",
           icon: "warning",
           showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Yes, delete it!"
+          confirmButtonColor: "#eb0029",
+          cancelButtonColor: "#010f1c",
+          confirmButtonText: "Yes, Log Out!"
         }).then((result) => {
           if (result.isConfirmed) {
             navigate('/signin');
@@ -78,7 +78,7 @@ const NavBar = () => {
 
         {
           user?.email? 
-        <button onClick={handelLogOut} className="text-white hover:text-white border border-[#eb0029] hover:bg-[#eb0029] font-medium rounded-lg text-sm md:px-5 px-3  py-1 md:py-1.5 text-center mr-2 md:mr-3 ">Log Out</button>:
+        <button onClick={handelLogOut} className="text-white hover:text-white border border-[#eb0029] hover:bg-[#eb0029] font-medium rounded-lg text-xs md:px-5 px-2  py-1 md:py-1.5 text-center mr-2 md:mr-3 ">LogOut</button>:
         <Link to="/signin">
         <button className="text-white hover:text-white border border-[#eb0029] hover:bg-[#eb0029] font-medium rounded-lg text-sm md:px-5 px-3  py-1 md:py-1.5 text-center mr-2 md:mr-3 ">Login</button>
         </Link>
@@ -88,7 +88,7 @@ const NavBar = () => {
         {
           user?.email? <Link to={'/userName'}>
       <button className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
-        <img className="md:w-8 w-6 md:h-8 h-6 rounded-full" src={user.photoURL}/>
+        <img className="w-8 md:w-12 md:h-12 h-8 rounded-full" src={user.photoURL}/>
       </button>
       </Link>: null
         }
