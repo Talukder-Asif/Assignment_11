@@ -21,11 +21,13 @@ import AddFoodItems from './Pages/UserProfile/AddFoodItems/AddFoodItems';
 import MyFootItems from './Pages/UserProfile/MyFoodItems/MyFootItems';
 import UpdateFood from './Pages/UserProfile/UpdateItem/UpdateFood';
 import MyOrder from './Pages/UserProfile/MyOrderFood/MyOrder';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
