@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import HeaderTytle from "/src/Components/HeaderTytle";
 
 const SingleProduct = () => {
     const foodData = useLoaderData()
     const {name, _id, image, category, price,origine, quantity, shelfName,shortDescription, details  } = foodData;
     return (
         <div>
+        <HeaderTytle title={name}></HeaderTytle>
             <div style={{backgroundImage: "url(https://themeholy.com/wordpress/pizzan/wp-content/uploads/2023/06/breadcumb_bg_2-1.jpg)"}} className=" bg-no-repeat bg-cover bg-center">
             <div className="max-w-7xl m-auto md:py-20 p-5 md:pl-36 lg:py-24 ">
             <div className="space-y-2 md:space-y-5">

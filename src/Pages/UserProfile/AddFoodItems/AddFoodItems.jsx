@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Authantication/AuthProvider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
+import HeaderTytle from "/src/Components/HeaderTytle";
 
 const AddFoodItems = () => {
     const {user} = useContext(AuthContext)
@@ -41,6 +42,7 @@ const AddFoodItems = () => {
     }
   return (
     <div>
+          <HeaderTytle title ="Add Food" ></HeaderTytle>
       <h3 className=" mb-5 text-3xl md:text-4xl lg:text-5xl text-gray-900  font-bold">
         Add a Food
       </h3>

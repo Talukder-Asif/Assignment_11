@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Authantication/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
+import HeaderTytle from "/src/Components/HeaderTytle";
 
 const FoodOrder = () => {
   const { user } = useContext(AuthContext);
@@ -104,6 +105,7 @@ const FoodOrder = () => {
   if (addBy === user.email) {
     return (
       <div>
+      <HeaderTytle title ="Order Page" ></HeaderTytle>
         <div
           style={{
             backgroundImage:
@@ -167,7 +169,7 @@ const FoodOrder = () => {
             </div>
           </div>
 
-          <div className="absolute h-full w-full bg-[#ffffff5c] pt-[3%] top-0">
+          <div className="absolute h-full right-8 md:right-0 w-[85%] md:w-full bg-[#ffffff5c] pt-[45%] md:pt-[3%] top-0">
             <h3 className="text-3xl md:text-4xl text-center text-[#eb0029] lg:text-5xl font-bold">
               You can't buy your own food
             </h3>
@@ -180,6 +182,7 @@ const FoodOrder = () => {
   if (quantity === 0) {
     return (
       <div>
+            <HeaderTytle title ="Order Page" ></HeaderTytle>
         <div
           style={{
             backgroundImage:
@@ -254,6 +257,8 @@ const FoodOrder = () => {
   }
   return (
     <div>
+          <HeaderTytle title ="Order Page" ></HeaderTytle>
+
       <div
         style={{
           backgroundImage:

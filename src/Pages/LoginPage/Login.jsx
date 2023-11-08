@@ -4,6 +4,7 @@ import { AuthContext } from '../../Authantication/AuthProvider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { GoogleAuthProvider } from 'firebase/auth';
+import HeaderTytle from "/src/Components/HeaderTytle";
 
 const Login = () => {
   const {login, googleSignup} = useContext(AuthContext);
@@ -69,6 +70,7 @@ const Login = () => {
   }
   return (
     <div>
+    <HeaderTytle title= "Log in"></HeaderTytle>
       <div
         style={{
           backgroundImage:

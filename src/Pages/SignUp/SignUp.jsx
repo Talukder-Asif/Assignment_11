@@ -4,6 +4,8 @@ import { GoogleAuthProvider } from "firebase/auth";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Authantication/AuthProvider/AuthProvider";
+import HeaderTytle from "/src/Components/HeaderTytle";
+
 const SignUp = () => {
   const navigate = useNavigate();
   const [error, seterror] = useState(null);
@@ -81,6 +83,7 @@ const SignUp = () => {
   };
   return (
     <div>
+    <HeaderTytle title="Sing up"></HeaderTytle>
       <div
         style={{
           backgroundImage:

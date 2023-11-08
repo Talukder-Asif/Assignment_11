@@ -22,6 +22,7 @@ import MyFootItems from './Pages/UserProfile/MyFoodItems/MyFootItems';
 import UpdateFood from './Pages/UserProfile/UpdateItem/UpdateFood';
 import MyOrder from './Pages/UserProfile/MyOrderFood/MyOrder';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import OneBlog from './Pages/BlogPage/OneBlog';
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,13 @@ const router = createBrowserRouter([
       },
       {
         path:'/blog',
-        element:<Blog></Blog>
+        element:<Blog></Blog>,
+        loader: () =>fetch('/News.json')
+      },
+      {
+        path: '/blog/:id',
+        element: <OneBlog></OneBlog>,
+        loader: () =>fetch('/News.json')
       },
       {
         path:'/signin',

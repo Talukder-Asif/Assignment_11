@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../Authantication/AuthProvider/AuthProvider';
+import HeaderTytle from "/src/Components/HeaderTytle";
 
 const Profile = () => {
     const {user}= useContext(AuthContext)
     return (
         <div>
+              <HeaderTytle title ={user.displayName} ></HeaderTytle>
         <h3 className=" mb-5 text-3xl md:text-4xl lg:text-5xl text-gray-900  font-bold">
              My Profile</h3>
             <div className='flex gap-10 flex-wrap'>

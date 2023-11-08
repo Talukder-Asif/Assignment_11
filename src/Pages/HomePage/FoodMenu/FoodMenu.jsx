@@ -33,16 +33,16 @@ const FoodMenu = () => {
               <div
               key={i}
                 className={i==7 || i==6 ? 
-                "flex abc justify-evenly  items-center bg-[#faf7f2]  p-2 md:p-3 md:pl-5 shadow md:flex-row md:max-w-xl border-2  border-[#eb002777] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700":
+                "flex abc items-center bg-[#faf7f2]  p-2 md:p-3 md:pl-5 shadow md:flex-row md:max-w-xl border-2  border-[#eb002777] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700":
                 
-                 "flex abc justify-evenly items-center bg-[#faf7f2] p-2 md:p-3 md:pl-5 shadow md:flex-row md:max-w-xl border-2 border-b-0 border-[#eb002777] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"}
+                 "flex abc items-center bg-[#faf7f2] p-2 md:p-3 md:pl-5 shadow md:flex-row md:max-w-xl border-2 border-b-0 border-[#eb002777] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"}
               >
                 <img
                   className="object-cover defg border-2 border-transparent p-2 rounded-full w-20 h-auto md:w-32 "
                   src={d.image}
                   alt=""
                 />
-                <div className="lg:grid grid-cols-3 items-baseline gap-10">
+                <div className="lg:grid grid-cols-3 w-full items-baseline gap-10">
 
                 <div className="col-span-2 flex flex-col justify-between p-2 md:p-4 leading-normal">
                   <h5 className="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { Navigation } from "swiper/modules";
 import Swal from "sweetalert2";
+import HeaderTytle from "/src/Components/HeaderTytle";
 
 const MyFootItems = () => {
   const { user } = useContext(AuthContext);
@@ -49,6 +50,7 @@ const MyFootItems = () => {
 
   return (
     <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <HeaderTytle title ="My Food" ></HeaderTytle>
       {foodData.map((food) => (
         <div
           key={food._id}

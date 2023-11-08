@@ -3,6 +3,7 @@ import { AuthContext } from "../../../Authantication/AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
+import HeaderTytle from "/src/Components/HeaderTytle";
 
 const UpdateFood = () => {
   const { user } = useContext(AuthContext);
@@ -43,6 +44,8 @@ const UpdateFood = () => {
 
   return (
     <div>
+          <HeaderTytle title ="Update Food" ></HeaderTytle>
+
       <h3 className=" mb-5 text-3xl md:text-4xl lg:text-5xl text-gray-900  font-bold">
         Update : {foodData.name}
       </h3>

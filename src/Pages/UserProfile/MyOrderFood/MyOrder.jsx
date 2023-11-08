@@ -3,6 +3,7 @@ import { AuthContext } from "../../../Authantication/AuthProvider/AuthProvider";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import HeaderTytle from "/src/Components/HeaderTytle";
 
 const MyOrder = () => {
   const { user } = useContext(AuthContext);
@@ -48,6 +49,8 @@ const MyOrder = () => {
 
   return (
     <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <HeaderTytle title ="My Order" ></HeaderTytle>
+
       {orderData.map((data) => (
         <div
           key={data._id}

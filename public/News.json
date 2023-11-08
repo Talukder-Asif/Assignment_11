@@ -1,0 +1,23 @@
+[
+    {
+        "id":"01",
+      "title": "What is one way data binding?",
+      "thumbnail": "https://www.tutlane.com/images/angularjs/angularjs-one-way-data-binding.png",
+      "image": "https://www.c-sharpcorner.com/UploadFile/ff2f08/data-binding-in-angularjs/Images/One-Way%20and%20Two-Way%20Data%20Binding.png",
+      "short_description": "One-way data binding is a data flow model where data moves in a single direction, typically from a data source to a user interface. Changes to the data source automatically update the UI, ensuring a clear and predictable flow. However, changes in the UI do not affect the data source without explicit handling. It simplifies data management and is commonly used in modern web development frameworks like React."
+    },
+    {
+        "id":"02",
+      "title": "What is NPM in node.js?",
+      "thumbnail": "https://images.contentful.com/hspc7zpa5cvq/7FC6PtuAjYi9PEd1cXyuuK/74215f88437a976ccff2aa633a4c7c3e/NodeJS-Npm-01-1.png",
+      "image": "https://i0.wp.com/monkelite.com/wp-content/uploads/2019/04/Node-Package-Manager.png?fit=750%2C375&ssl=1&resize=1280%2C720",
+      "short_description": "NPM (Node Package Manager) is a tool for managing and installing packages (libraries and modules) in Node.js applications. It simplifies dependency management, package installation, and version control, making it easier for developers to work with Node.js projects and share code."
+    },
+    {
+        "id":"03",
+      "title": "Difference between Mongodb database vs mySQL database.",
+      "thumbnail": "https://miro.medium.com/v2/resize:fit:1024/1*NrNPQLASypCi1W1phIo71w.png",
+      "image": "https://uploads-ssl.webflow.com/605c9e03d6553a5d82976ce2/63c0d55bef9c0b1a0f11a670_Screenshot%202023-01-13%20at%209.21.26%20AM.png",
+      "short_description": "MongoDB and MySQL are two popular database management systems with distinct differences. MongoDB utilizes a document-oriented, NoSQL data model, which allows for flexible and dynamic data structures. In contrast, MySQL adheres to a table-based, relational data model, requiring predefined and structured data schemas. MongoDB is schema-less, accommodating evolving data structures, while MySQL is schema-based, necessitating strict adherence to predefined schemas. Querying also differs; MongoDB uses JSON-like queries and aggregation pipelines, while MySQL employs SQL (Structured Query Language) for complex relational queries. When it comes to scalability, MongoDB is well-suited for horizontal scaling and real-time analytics, while MySQL primarily supports vertical scaling and is favored for transactional applications. MongoDB offers strong consistency and durability, with flexibility in distributed setups, while MySQL is known for strict ACID compliance. Both have active communities and are used in various use cases, making the choice between them dependent on specific application requirements. MongoDB is often chosen for its flexibility and scalability, while MySQL is preferred for applications with structured data and complex transactions."
+    }
+  ]
