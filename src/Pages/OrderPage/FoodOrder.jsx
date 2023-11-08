@@ -92,10 +92,10 @@ const FoodOrder = () => {
 
           //   Here I will send the orders data to the server
           axios
-            .post("http://localhost:5000/orders", orderData)
+            .post("https://testhalal-server.vercel.app/orders", orderData)
             .then((res) => console.log(res.data));
           // Here I will update the product availability
-          axios.put(`http://localhost:5000/foods/${_id}`, updateData)
+          axios.put(`https://testhalal-server.vercel.app/foods/${_id}`, updateData)
           .then((res) => console.log(res.data));
         }
       });

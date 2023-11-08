@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Authantication/AuthProvider/AuthProvider";
 import HeaderTytle from "/src/Components/HeaderTytle";
+import axios from "axios";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -35,6 +36,9 @@ const SignUp = () => {
     }
     return createUser(email, password)
       .then((result) => {
+        const user = result.user;
+      axios.post('https://testhalal-server.vercel.app/jwt', user, {withCredentials:true})
+      .then(res=> console.log(res.data))
         update(name, photo);
         Swal.fire({
           icon: "success",
@@ -57,6 +61,11 @@ const SignUp = () => {
     googleSignup()
       .then((result) => {
         const credential = GoogleAuthProvider.credentialFromResult(result);
+
+        const user = result.user;
+      axios.post('https://testhalal-server.vercel.app/jwt', user, {withCredentials:true})
+      .then(res=> console.log(res.data))
+
         Swal.fire({
           icon: "success",
           title: "Sign up successfully",

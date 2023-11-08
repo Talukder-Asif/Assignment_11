@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<HomePage></HomePage>,
-        loader: () => fetch('http://localhost:5000/top6foods'),
+        loader: () => fetch('https://testhalal-server.vercel.app/top6foods'),
       },
       {
         path:'/foodItems',
@@ -60,14 +60,14 @@ const router = createBrowserRouter([
       {
         path:'/foods/:id',
         element:<SingleProduct/>,
-        loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
+        loader: ({params})=> fetch(`https://testhalal-server.vercel.app/foods/${params.id}`)
       },
       {
         path:'/foods/order/:id',
         element:<PrivateRoute>
           <FoodOrder></FoodOrder>
         </PrivateRoute>,
-        loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
+        loader: ({params})=> fetch(`https://testhalal-server.vercel.app/foods/${params.id}`)
       },
       {
         path:'/dashboard',
@@ -90,7 +90,7 @@ const router = createBrowserRouter([
           {
             path:'/dashboard/update/:id',
             element:<UpdateFood></UpdateFood>,
-            loader: ({params})=> fetch(`http://localhost:5000/foods/${params.id}`)
+            loader: ({params})=> fetch(`https://testhalal-server.vercel.app/foods/${params.id}`)
           },
           {
             path: '/dashboard/order',

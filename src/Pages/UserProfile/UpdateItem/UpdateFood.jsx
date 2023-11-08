@@ -4,7 +4,8 @@ import Swal from "sweetalert2";
 import { useLoaderData } from "react-router-dom";
 import axios from "axios";
 import HeaderTytle from "/src/Components/HeaderTytle";
-
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+const axiosSecure = useAxiosSecure()
 const UpdateFood = () => {
   const { user } = useContext(AuthContext);
   const foodData = useLoaderData();
@@ -25,7 +26,8 @@ const UpdateFood = () => {
       addBy: form.email.value,
       details: form.details.value,
     };
-    axios.put(`http://localhost:5000/foods/${foodData._id}`,data)
+    // axios.put(`https://testhalal-server.vercel.app/foods/${foodData._id}`,data)
+    axiosSecure.put(`/foods/${foodData._id}`, data)
     .then(res => res?.data?.acknowledged?
         Swal.fire({
             position: "center",
@@ -135,6 +137,7 @@ const UpdateFood = () => {
                 name="quantity"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 defaultValue={foodData?.quantity}
+                min={0}
                 required
               />
             </div>

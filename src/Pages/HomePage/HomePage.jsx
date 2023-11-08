@@ -3,6 +3,7 @@ import Slider from "./Slider/Slider";
 import PopularFood from "./PopularFood/PopularFood";
 import FoodMenu from "./FoodMenu/FoodMenu";
 import HeaderTytle from "/src/Components/HeaderTytle";
+
 const HomePage = () => {
     const foodData = useLoaderData();
     return (

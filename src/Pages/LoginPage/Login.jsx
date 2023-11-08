@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { GoogleAuthProvider } from 'firebase/auth';
 import HeaderTytle from "/src/Components/HeaderTytle";
+import axios from 'axios';
 
 const Login = () => {
   const {login, googleSignup} = useContext(AuthContext);
@@ -18,13 +19,19 @@ const Login = () => {
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
+
+      axios.post('https://testhalal-server.vercel.app/jwt', user, {withCredentials:true})
+      .then(res=> console.log(res.data))
+
+
       Swal.fire({
         icon: 'success',
         title: 'Log in successfully',
         showConfirmButton: false,
         timer: 1500
       })
-      navigate(location?.state ? location.state : '/')
+
+      // navigate(location?.state ? location.state : '/')
       // ...
     })
     .catch((error) => {
@@ -48,8 +55,9 @@ const Login = () => {
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      // IdP data available using getAdditionalUserInfo(result)
-      // ...
+      axios.post('https://testhalal-server.vercel.app/jwt', user, {withCredentials:true})
+      .then(res=> console.log(res.data))
+
       Swal.fire({
         icon: 'success',
         title: 'Log in successfully',

@@ -6,7 +6,7 @@ const FoodMenu = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/availablefoods")
+      .get("https://testhalal-server.vercel.app/availablefoods")
       .then((response) => {
         setData(response.data);
         setLoader(false);

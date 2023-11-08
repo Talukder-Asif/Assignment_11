@@ -24,7 +24,7 @@ const AddFoodItems = () => {
             details: form.details.value,
         }
 
-        axios.post('http://localhost:5000/addfood',data)
+        axios.post('https://testhalal-server.vercel.app/addfood',data)
         .then(res => res?.data?.acknowledged? 
             Swal.fire({
                 position: "center",

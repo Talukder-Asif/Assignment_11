@@ -1,8 +1,12 @@
-# React + Vite
+Hello, My project name is TESTHALAL, It's a online food selling website.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Domain: https://testhalal-2a0b9.web.app, https://rhetorical-harbor.surge.sh
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+5 main feture:
+-
+- It is firebase authantication website.
+- Your personal information will protected
+- If you create a account, you can add your food, order from here easyly
+- User will get there own dashboard
+- User can create account both with email and password or just with google account
