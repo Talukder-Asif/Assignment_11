@@ -1,25 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../../Authantication/AuthProvider/AuthProvider";
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../../Authantication/AuthProvider/AuthProvider';
 import HeaderTytle from "/src/Components/HeaderTytle";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const Profile = () => {
-  const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
-  const { user } = useContext(AuthContext);
-  const axiosSecure = useAxiosSecure();
-  const [admin, setAdmin] = useState([]);
-  useEffect(() => {
-    axiosSecure.get(`/user/${user?.email}`).then((res) => {
-      setLoading(false);
-      setAdmin(res?.data);
-    });
-  }, []);
+    const {user}= useContext(AuthContext)
+    const axiosSecure = useAxiosSecure();
+    const [admin, setAdmin] = useState([]);
+    useEffect(()=>{
+        axiosSecure.get(`/user/${user?.email}`)
+        .then(res => {
+            setLoading(false)
+            setAdmin(res?.data)})
+    },[])
 
-  if (loading) {
-    return (
-      <div className="grid min-h-[400px] content-center justify-center">
-        <div className="text-center">
+  if(loading){
+    return<div className="grid min-h-[400px] content-center justify-center">
+               <div className="text-center">
           <div role="status">
             <svg
               aria-hidden="true"
@@ -40,32 +39,29 @@ const Profile = () => {
             <span className="sr-only">Loading...</span>
           </div>
         </div>
-        <h1 className="text-4xl md:text-7xl font-bold">Loading....</h1>
-      </div>
-    );
-  }
-  return (
-    <div>
-      <HeaderTytle title={user.displayName}></HeaderTytle>
-      <h3 className=" mb-5 text-3xl md:text-4xl lg:text-5xl text-gray-900  font-bold">
-        My Profile
-      </h3>
-      <div className="flex gap-10 flex-wrap">
-        <img className="w-40 rounded-full" src={admin.photo} alt="" />
-        <div>
-          <h3 className="text-lg mb-5 md:text-xl text-gray-900 lg:text-2xl font-bold">
-            ID : {admin._id}
-          </h3>
-          <h3 className="text-lg mb-5 md:text-xl text-gray-900 lg:text-2xl font-bold">
-            Full Name : {admin.name}
-          </h3>
-          <h3 className="text-lg mb-5 md:text-xl text-gray-900 lg:text-2xl font-bold">
-            Email : {admin.email}
-          </h3>
-        </div>
-      </div>
+       <h1 className="text-4xl md:text-7xl font-bold">
+        Loading....
+       </h1>
     </div>
-  );
+}
+    return (
+        <div>
+              <HeaderTytle title ={user.displayName} ></HeaderTytle>
+        <h3 className=" mb-5 text-3xl md:text-4xl lg:text-5xl text-gray-900  font-bold">
+             My Profile</h3>
+            <div className='flex gap-10 flex-wrap'>
+                <img className='w-40 rounded-full' src={admin.photo} alt="" />
+                <div>
+                <h3 className="text-lg mb-5 md:text-xl text-gray-900 lg:text-2xl font-bold">
+             ID : {admin._id}</h3>
+                <h3 className="text-lg mb-5 md:text-xl text-gray-900 lg:text-2xl font-bold">
+             Full Name : {admin.name}</h3>
+                <h3 className="text-lg mb-5 md:text-xl text-gray-900 lg:text-2xl font-bold">
+             Email : {admin.email}</h3>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default Profile;
