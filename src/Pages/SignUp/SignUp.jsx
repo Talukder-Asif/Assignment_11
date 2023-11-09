@@ -46,7 +46,7 @@ const SignUp = () => {
           showConfirmButton: false,
           timer: 2000,
         });
-        navigate("/");
+        // navigate("/");
       })
       .catch((error) => {
         Swal.fire({
@@ -72,7 +72,7 @@ const SignUp = () => {
           showConfirmButton: false,
           timer: 2000,
         });
-        navigate("/");
+        // navigate("/");
       })
       .catch((error) => {
         // Handle Errors here.

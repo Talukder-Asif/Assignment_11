@@ -65,7 +65,7 @@ const FoodOrder = () => {
         details
       };
 
-    if (quantity < e.target.quantity.value) {
+    if (parseInt(quantity) < parseInt(e.target.quantity.value)) {
       Swal.fire({
         icon: "error",
         title: "Oops...",

@@ -25,6 +25,8 @@ const AuthProvider = ({ children }) => {
     setloading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+
+  // Log Out
   const logOut = () => {
     setloading(true);
     return signOut(auth);
@@ -49,7 +51,7 @@ const AuthProvider = ({ children }) => {
           email: User.email,
           photo: User.photoURL,
         };
-        axios.put(`https://testhalal-server.vercel.app/user/${User.email}`, data);
+        axios.put(`https://testhalal-server.vercel.app/user/${User.email}`, data,{ withCredentials: true});
         setUser(User);
       }
     });
