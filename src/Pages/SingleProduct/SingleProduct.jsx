@@ -19,7 +19,7 @@ const SingleProduct = () => {
 
             <div className='md:grid grid-cols-2 p-4 gap-10 max-w-6xl m-auto py-10 border-b-2 border-[#eb0029]'>
                 <div>
-                    <img className='rounded-full mb-5' src={image} alt="" />
+                    <img className=' mb-5' src={image} alt="" />
                 </div>
                 <div className='space-y-3'>
                 <h3 className="text-3xl md:text-4xl text-gray-900 lg:text-5xl font-bold">{name}</h3>
