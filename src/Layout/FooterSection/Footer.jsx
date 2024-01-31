@@ -20,16 +20,16 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-200 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Flowbite
+                  <a href="/" className="hover:underline">
+                    Home
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/foodItems"
                     className="hover:underline"
                   >
-                    Tailwind CSS
+                    Food Items
                   </a>
                 </li>
               </ul>
@@ -41,15 +41,15 @@ const Footer = () => {
               <ul className="text-gray-200 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="#"
                     className="hover:underline "
                   >
-                    Github
+                    Facebook
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="#"
                     className="hover:underline"
                   >
                     Discord
@@ -79,7 +79,7 @@ const Footer = () => {
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-300 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © 2024{" "}
             <a href="#" className="hover:underline">
               Talukder_Asif™
             </a>
