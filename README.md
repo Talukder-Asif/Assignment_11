@@ -1,6 +1,6 @@
 Hello, My project name is TESTHALAL, It's a online food selling website.
 
-Domain: https://testhalal-2a0b9.web.app, https://rhetorical-harbor.surge.sh
+Domain: https://testhalal-2a0b9.web.app
 
 
 5 main feture:

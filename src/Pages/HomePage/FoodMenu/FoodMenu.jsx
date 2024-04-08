@@ -33,7 +33,7 @@ const FoodMenu = () => {
         ) : (
           <div className="md:grid grid-cols-2 gap-x-5 justify-evenly">
             {data?.map((d, i) => (
-              <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom"
+              <div data-aos="fade-up" data-aos-anchor-placement="top-bottom"
               key={i}
                 className={i==7 || i==6 ? 
                 "flex abc items-center bg-[#faf7f2]  p-2 md:p-3 md:pl-5 shadow md:flex-row md:max-w-xl border-2  border-[#eb002777] dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700":

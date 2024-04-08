@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 
 const navStyle =
   "block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-700 md:hover:bg-transparent md:hover:text-gray-400 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
-const ImgStyle = "rounded-sm px-6 py-2 block border-2 border-transparent hover:border-[#eb0029]";
+const ImgStyle = "rounded-sm px-6 md:text-md text-sm py-2 block border-2 border-transparent hover:border-[#eb0029]";
 
 let dropdownClick = false;
 const navs = (
@@ -70,26 +70,27 @@ const NavBar = () => {
   };
   const navigate = useNavigate();
   const handelLogOut = () => {
-    logOut()
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#eb0029",
+      cancelButtonColor: "#010f1c",
+      confirmButtonText: "Yes, Log Out!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        logOut()
       .then(() => {
-        Swal.fire({
-          title: "Are you sure?",
-          text: "You won't be able to revert this!",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#eb0029",
-          cancelButtonColor: "#010f1c",
-          confirmButtonText: "Yes, Log Out!",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            navigate("/signin");
-            window.location.reload();
-          }
-        });
+        navigate("/signin");
+        window.location.reload();
       })
       .catch((error) => {
         // An error happened.
       });
+      }
+    });
+    
   };
   const items =
     <>
@@ -108,7 +109,7 @@ const NavBar = () => {
         </Link>
         <button 
         onClick={handelLogOut}
-         className={"rounded-sm px-6 py-2 block border-2 border-transparent text-white w-full font-bold hover:border-[#eb0029] hover:bg-transparent hover:text-black bg-[#eb0029]"}>
+         className={"rounded-sm px-6 py-2 block border-2 border-transparent text-white text-md w-full font-bold hover:border-[#eb0029] hover:bg-transparent hover:text-black bg-[#eb0029]"}>
           Log Out
         </button>
         
@@ -130,9 +131,7 @@ const NavBar = () => {
             >
               <button onClick={() => setOpen((prev) => !prev)}>
                 <img
-                  width={48}
-                  height={48}
-                  className="size-10 rounded-full bg-slate-500 object-cover duration-500 hover:scale-x-[98%] hover:opacity-80"
+                  className="size-10 w-11 h-11 m-auto rounded-full bg-slate-500 object-cover duration-500 mx-4 hover:scale-x-[98%] hover:opacity-80"
                   src={user?.photoURL}
                   alt="Image"
                 />

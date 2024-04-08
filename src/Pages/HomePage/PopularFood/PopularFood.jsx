@@ -16,7 +16,7 @@ const PopularFood = ({ foodData, pageName }) => {
       }
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl m-auto px-5">
         {foodData?.map((food) => (
-          <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" key={food._id} className="mt-5 mb-5 relative abc bg-[#faf7f2] border border-gray-200 group hover:border-[#eb0029] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" key={food._id} className="mt-5 mb-5 relative abc bg-[#faf7f2] border border-gray-200 group hover:border-[#eb0029] rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <img
                 className=" my-8 m-auto max-w-[80%] rounded-full border-4 border-transparent group-hover:border-[#eb0029]"
                 src={food.image}
